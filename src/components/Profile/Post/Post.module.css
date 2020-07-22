@@ -1,0 +1,16 @@
+.item {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.item span {
+    color: crimson;
+    font-weight: bold;
+}

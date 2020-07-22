@@ -1,0 +1,32 @@
+.nav {
+    grid-area: n;
+    padding: 10px;
+    padding-left: 25%;
+    background: linear-gradient(243.26deg, #C1199C -11.48%, rgba(193, 25, 156, 0.36) 84.09%);
+}
+
+.item {
+    margin-top: 15px;
+}
+
+.item a {
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    transition: all 200ms;
+}
+
+.item a.activeLink {
+    border-left: 3px solid black;
+    padding-left: 5px;
+    color: black;
+}
+
+.item a:hover {
+    padding-left: 5px;
+    transition: all 200ms;
+}
+
+

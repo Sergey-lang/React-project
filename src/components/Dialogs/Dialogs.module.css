@@ -1,0 +1,54 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    height: auto;
+    margin: 5%;
+}
+
+.dialog a {
+    color: #fffffff7;
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+.dialog a:hover {
+    padding-left: 5px;
+    transition: all 200ms;
+}
+
+.dialogsItems {
+    font-size: 17px;
+}
+
+.messages {
+    color: rgb(240, 240, 240);
+    font-size: 17px;
+}
+
+.addMessage {
+    margin-top: 15px;
+}
+
+.add_post {
+    box-shadow: inset 0px 1px 0px 0px #97c4fe;
+    background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+    background-color: #3d94f6;
+    border: 1px solid #337fed;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #1570cd;
+}
+
+.add_post:hover {
+    background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+    background-color: #1e62d0;
+}
+
+
+
+
