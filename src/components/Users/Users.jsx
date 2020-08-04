@@ -2,11 +2,11 @@ import React from "react";
 import s from './Users.module.css';
 import userPhoto from '../../asets/images/user.png'
 import { NavLink } from 'react-router-dom';
-import * as axios from 'axios';
-import {usersAPI} from '../../api/api'
+
 
 let Users = (props) => {
     //вычисляем кол-во страниц для отрисовки
+    debugger;
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {

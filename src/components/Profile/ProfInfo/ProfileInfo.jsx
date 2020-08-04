@@ -17,7 +17,7 @@ const ProfileInfo = (props) => {
                     src='http://getwallpapers.com/wallpaper/full/0/c/8/1311997-sound-wave-wallpaper-1920x1080-for-ipad-pro.jpg'/>
             </div>
             <div className={s.discriptionBlock}>
-                <img src={props.profile.photos.large}/>
+                <img className={s.personalPhoto} src={props.profile.photos.large}/>
                 <p>{props.profile.aboutMe}</p>
                 <p>{props.profile.contacts.instagram}</p>
                 <p>{props.profile.userId}</p>

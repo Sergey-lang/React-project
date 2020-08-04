@@ -3,15 +3,16 @@ import profileReducer from './profile-reducer';
 import dialogsReducer from './dialogs-reducer';
 import usersReducer from './users-reducer';
 import authReducer from './auth-reducer';
-import thinkMiddlawere from 'redux-thunk';
+import thinkMiddlaware from 'redux-thunk';
 
 let reducers = combineReducers({
+	//login page
 	profilePage: profileReducer,
 	dialogsPage: dialogsReducer,
 	usersPage: usersReducer,
 	auth: authReducer
 });
 
-let store = createStore(reducers,applyMiddleware(thinkMiddlawere));
+let store = createStore(reducers,applyMiddleware(thinkMiddlaware));
 window.store = store;
 export default store;
