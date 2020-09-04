@@ -11,7 +11,6 @@ import ProfileContainer from './components/Profile/ProfileContainer';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
 
-
 const App = (props) => {
     return (
         <div className='all_wrapper'>
@@ -19,7 +18,7 @@ const App = (props) => {
                 <HeaderContainer/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                     <Route path='/login'
+                    <Route path='/login'
                            render={() => <Login/>}/>
                     <Route path='/profile/:userId?'
                            render={() => <ProfileContainer/>}/>
