@@ -5,11 +5,11 @@ import ProfileStatus from './ProfileStatus';
 
 
 const ProfileInfo = (props) => {
-    if(!props.profile) {
-        return <Preloader />
+    if (!props.profile) {
+        return <Preloader/>
     }
-    if(!props.profile.photos.large) {
-             return (`photo didn't find`)       
+    if (!props.profile.photos.large) {
+        return (`photo didn't find`)
     }
     return (
         <div>

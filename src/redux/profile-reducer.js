@@ -1,4 +1,4 @@
-import { usersAPI, profileAPI } from '../api/api';
+import {usersAPI, profileAPI} from '../api/api';
 
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
@@ -7,8 +7,8 @@ const SET_STATUS = 'SET_STATUS';
 
 let initializeState = {
     posts: [
-        { id: 1, message: 'Hi, how do you feel? I have not seen you since I was in Berlin!', likesCount: 12 },
-        { id: 2, message: 'Wow! It is great! When are you going there?', likesCount: 12 }
+        {id: 1, message: 'Hi, how do you feel? I have not seen you since I was in Berlin!', likesCount: 12},
+        {id: 2, message: 'Wow! It is great! When are you going there?', likesCount: 12}
     ],
     newPostText: '',
     profile: null,
@@ -23,7 +23,6 @@ const profileReducer = (state = initializeState, action) => {
                 message: state.newPostText,
                 likesCount: 0
             };
-            //copy new data in copy state//don't copy data in original state!
             return {
                 ...state,
                 posts: [...state.posts, newPost],
@@ -52,11 +51,11 @@ const profileReducer = (state = initializeState, action) => {
     }
 }
 
-export const addPostActionCreator = () => ({ type: ADD_POST });
+export const addPostActionCreator = () => ({type: ADD_POST});
 export const updateNewPostTextActionCreator = (text) =>
-    ({ type: UPDATE_NEW_POST_TEXT, newText: text });
-export const setUserProfile = (profile) => ({ type: SET_USER_PROFILE, profile });
-export const setStatus = (status) => ({ type: SET_STATUS, status });
+    ({type: UPDATE_NEW_POST_TEXT, newText: text});
+export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
+export const setStatus = (status) => ({type: SET_STATUS, status});
 
 export default profileReducer;
 
