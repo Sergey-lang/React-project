@@ -6,13 +6,9 @@ import { NavLink } from 'react-router-dom';
 
 let Users = (props) => {
     //вычисляем кол-во страниц для отрисовки
-    debugger;
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-    let pages = [];
-    for (let i = 1; i <= pagesCount; i++) {
-        {
-            pages.push(i);
-        }
+    let pages = []
+    for (let i = 505; i <= 525; i++) {
+        pages.push(i)
     }
 
     return (
@@ -30,7 +26,7 @@ let Users = (props) => {
                     <div className={s.user}>
                         <div>
                             <NavLink to={'/profile/' + u.id}>
-                                <img className={s.avatar} src={u.photos.small != null ? u.photos.small : userPhoto} />
+                                <img alt={'user'} className={s.avatar} src={u.photos.small != null ? u.photos.small : userPhoto} />
                             </NavLink>
                         </div>
                         <div>
