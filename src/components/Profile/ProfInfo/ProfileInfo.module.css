@@ -2,13 +2,12 @@
     padding: 10px;
 }
 
-.imageProfile {
-    height: 250px;
-    width: 100%;
+.avatarImg {
+    display: flex;
 }
 
-.personalPhoto {
-    height: 250px;
+.avatarImg img {
+    height: auto;
     width: 250px;
 }
 

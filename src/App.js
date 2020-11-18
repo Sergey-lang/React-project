@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import News from './components/News/News';
-import Music from './components/Music/Music';
-import Settings from './components/Settings/Settings';
+import {Navbar} from './components/Navbar/Navbar';
+import {News} from './components/News/News';
+import {Music} from './components/Music/Music';
+import {Settings} from './components/Settings/Settings';
 import {Route} from 'react-router-dom';
-import Login from './components/Login/Login';
+import {Login} from './components/Login/Login';
 import HeaderContainer from './components/Header/HeaderContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
 
-const App = (props) => {
+export const App = (props) => {
    return (
       <div className='all_wrapper'>
          <div className='app-wrapper'>
@@ -30,6 +30,4 @@ const App = (props) => {
       </div>
    );
 }
-
-export default App;
 
