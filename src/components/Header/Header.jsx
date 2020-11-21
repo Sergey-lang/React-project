@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Header.module.css';
 import { NavLink } from 'react-router-dom';
 
-const Header = (props) => {
+export const Header = (props) => {
     return (
         <header className={s.header}>
             <img alt={'header'} src="https://img.icons8.com/carbon-copy/100/000000/minecraft-logo.png" />
@@ -15,5 +15,4 @@ const Header = (props) => {
     )
 }
 
-export default Header;
 

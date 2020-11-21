@@ -17,7 +17,7 @@ let initializeState = {
    followingInProgress: [1, 2]
 };
 
-const usersReducer = (state = initializeState, action) => {
+export const usersReducer = (state = initializeState, action) => {
    switch (action.type) {
       case FOLLOW:
          return {
@@ -76,8 +76,6 @@ export const toggleFollowingProgress = (isFetching, userId) => ({
    userId
 });
 
-
-//thunks users
 export const getUsers = (currentPage, pageSize) => {
 
    return (dispatch) => {
@@ -117,6 +115,3 @@ export const unfollow = (userId) => {
          });
    }
 }
-
-
-export default usersReducer;

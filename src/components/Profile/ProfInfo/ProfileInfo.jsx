@@ -4,7 +4,7 @@ import Preloader from '../../common/preloader/Preloader';
 import ProfileStatus from './ProfileStatus';
 import avatar from './../../../asets/images/avatar.png'
 
-const ProfileInfo = (props) => {
+export const ProfileInfo = (props) => {
    if (!props.profile) {
       return <Preloader/>
    }
@@ -28,5 +28,4 @@ const ProfileInfo = (props) => {
    )
 }
 
-export default ProfileInfo;
 

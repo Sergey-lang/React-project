@@ -11,7 +11,7 @@ let initializeState = {
    isAuth: false
 };
 
-const authReducer = (state = initializeState, action) => {
+export const authReducer = (state = initializeState, action) => {
    switch (action.type) {
       case SET_USER_DATA:
 
@@ -28,13 +28,10 @@ const authReducer = (state = initializeState, action) => {
    }
 }
 
-
 export const setAuthUserData = (id, email, login) => (
    {type: SET_USER_DATA, data: {id, email, login}});
 export const toggleIsFetching = (isFetching) => (
    {type: TOGGLE_IS_FETCHING, isFetching});
-
-export default authReducer;
 
 export const getAuthUserData = () => {
    return (dispatch) => {

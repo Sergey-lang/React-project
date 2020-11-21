@@ -3,7 +3,7 @@ import s from './Users.module.css';
 import userPhoto from '../../asets/images/user.png'
 import {NavLink} from 'react-router-dom';
 
-let Users = (props) => {
+export const Users = (props) => {
    let pages = []
    for (let i = 505; i <= 525; i++) {
       pages.push(i)
@@ -55,5 +55,3 @@ let Users = (props) => {
       </div>
    )
 }
-
-export default Users;

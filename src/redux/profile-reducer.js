@@ -14,7 +14,7 @@ let initializeState = {
    status: '',
 };
 
-const profileReducer = (state = initializeState, action) => {
+export const profileReducer = (state = initializeState, action) => {
    switch (action.type) {
       case ADD_POST:
          return {
@@ -79,5 +79,3 @@ export const updateOwnProfileStatus = (status) => (dispatch) => {
          }
       });
 }
-
-export default profileReducer;
