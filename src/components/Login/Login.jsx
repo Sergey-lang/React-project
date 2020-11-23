@@ -35,6 +35,7 @@ export const LoginForm = (props) => {
          <div>
             <button>Login</button>
          </div>
+         {props.error &&  <div className={s.formSummaryError}>{props.error}</div>}
       </form>
    )
 }
@@ -58,6 +59,7 @@ const Login = (props) => {
 
 const mapStateToProps = (state) => ({
    isAuth: state.auth.isAuth
+
 })
 
 export default connect(mapStateToProps, {login})(Login)
