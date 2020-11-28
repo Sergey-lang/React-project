@@ -1,4 +1,8 @@
 .preloader {
-	width: 80px;
-	height: 80px;
+   width: 80px;
+   height: 80px;
+   position: absolute;
+   z-index: 5;
+   left: 50%;
+   top: 50%;
 }

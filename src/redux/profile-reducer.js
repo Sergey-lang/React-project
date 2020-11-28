@@ -55,13 +55,11 @@ export const setOwnProfileStatus = (status) => ({type: SET_OWN_PROFILE_STATUS, s
 
 
 //Thunks
-export const getUserProfileData = (userId) => {
-   return (dispatch) => {
-      profileAPI.getProfile(userId)
-         .then(data => {
-            dispatch(setUserProfileData(data));
-         });
-   }
+export const getUserProfileData = (userId) => (dispatch) => {
+   profileAPI.getProfile(userId)
+      .then(data => {
+         dispatch(setUserProfileData(data));
+      });
 }
 
 export const getStatusFomUser = (userId) => (dispatch) => {
