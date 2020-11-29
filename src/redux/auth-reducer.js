@@ -1,9 +1,6 @@
 import {authAPI} from '../api/auth-api';
 import {stopSubmit} from 'redux-form';
 
-const TOGGLE_IS_FETCHING = 'IS_FETCHING';
-const SET_USER_DATA = 'SET_USER_DATA'
-
 let initializeState = {
    id: null,
    email: null,
@@ -27,12 +24,17 @@ export const authReducer = (state = initializeState, action) => {
    }
 }
 
+//Actions Type
+const TOGGLE_IS_FETCHING = 'AUTH/IS_FETCHING';
+const SET_USER_DATA = 'AUTH/SET_USER_DATA'
+
+//Actions
 export const setAuthUserData = (id, email, login, isAuth) => (
    {type: SET_USER_DATA, data: {id, email, login, isAuth}});
 
-export const toggleIsFetching = (isFetching) => (
-   {type: TOGGLE_IS_FETCHING, isFetching});
+export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
 
+//Thunks
 export const getAuthUserData = () => (dispatch) => {
    return authAPI.authMe()
       .then(response => {

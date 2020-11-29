@@ -1,13 +1,5 @@
 import {usersAPI} from '../api/user-api';
 
-const FOLLOW = 'FOLLOW';
-const UNFOLLOW = 'UNFOLLOW';
-const SET_USERS = 'SET_USERS';
-const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
-const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
-const TOGGLE_IS_FETCHING = 'IS_FETCHING';
-const TOGGLE_IS_FOLLOWING_IN_PROGRESS = 'TOGGLE_IS_FOLLOWING_IN_PROGRESS';
-
 let initializeState = {
    users: [],
    pageSize: 5,
@@ -64,6 +56,16 @@ export const usersReducer = (state = initializeState, action) => {
    }
 }
 
+//Actions type
+const FOLLOW = 'USERS/FOLLOW';
+const UNFOLLOW = 'USERS/UNFOLLOW';
+const SET_USERS = 'USERS/SET_USERS';
+const SET_CURRENT_PAGE = 'USERS/SET_CURRENT_PAGE';
+const SET_TOTAL_USERS_COUNT = 'USERS/SET_TOTAL_USERS_COUNT';
+const TOGGLE_IS_FETCHING = 'USERS/IS_FETCHING';
+const TOGGLE_IS_FOLLOWING_IN_PROGRESS = 'USERS/TOGGLE_IS_FOLLOWING_IN_PROGRESS';
+
+//Actions
 export const followSuccess = (userId) => ({type: FOLLOW, userId});
 export const unfollowSuccess = (userId) => ({type: UNFOLLOW, userId});
 export const setUsers = (users) => ({type: SET_USERS, users});
@@ -76,6 +78,7 @@ export const toggleFollowingProgress = (isFetching, userId) => ({
    userId
 });
 
+//Thunks
 export const getUsers = (currentPage, pageSize) => (dispatch) => {
    dispatch(toggleIsFetching(true))
    usersAPI.getUsers(currentPage, pageSize).then(data => {

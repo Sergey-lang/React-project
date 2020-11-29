@@ -1,10 +1,5 @@
 import {profileAPI} from '../api/profile-api';
 
-const ADD_POST = 'ADD-POST';
-const SET_USER_PROFILE = 'SET-USER-PROFILE';
-const GET_USER_PROFILE_STATUS = 'SET-USER-PROFILE-STATUS';
-const SET_OWN_PROFILE_STATUS = 'UPDATE-PROFILE-STATUS';
-
 let initializeState = {
    posts: [
       {id: 1, message: 'Hi, how do you feel? I have not seen you since I was in Berlin!', likesCount: 12},
@@ -44,15 +39,19 @@ export const profileReducer = (state = initializeState, action) => {
    }
 }
 
-export const addPostActionCreator = (postMessageText) => ({type: ADD_POST, postMessageText});
+//Actions Type
+const ADD_POST = 'PROFILE/ADD-POST';
+const SET_USER_PROFILE = 'PROFILE/SET-USER-PROFILE';
+const GET_USER_PROFILE_STATUS = 'PROFILE/SET-USER-PROFILE-STATUS';
+const SET_OWN_PROFILE_STATUS = 'PROFILE/UPDATE-PROFILE-STATUS';
 
+//Actions
+export const addPostActionCreator = (postMessageText) => ({type: ADD_POST, postMessageText});
 export const setUserProfileData = (profile) =>
    ({type: SET_USER_PROFILE, profile})
-
-//STATUS
+//---status
 export const getUserStatus = (userStatus) => ({type: GET_USER_PROFILE_STATUS, userStatus});
 export const setOwnProfileStatus = (status) => ({type: SET_OWN_PROFILE_STATUS, status});
-
 
 //Thunks
 export const getUserProfileData = (userId) => (dispatch) => {
@@ -62,7 +61,7 @@ export const getUserProfileData = (userId) => (dispatch) => {
       });
 }
 
-export const getStatusFomUser = (userId) => (dispatch) => {
+export const getStatusFromUser = (userId) => (dispatch) => {
    profileAPI.getUserStatus(userId)
       .then(res => {
          dispatch(getUserStatus(res.data));

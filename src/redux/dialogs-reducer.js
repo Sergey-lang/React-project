@@ -1,10 +1,8 @@
-const SEND_MESSAGE = 'ADD-MESSAGE';
-
 let initializeState = {
    dialogs: [
-      {id: 1, name: 'Dimych'},
+      {id: 1, name: 'Egor'},
       {id: 2, name: 'Andrew'},
-      {id: 3, name: 'Sveta'}
+      {id: 3, name: 'David'}
    ],
    messages: [
       {id: 1, message: 'Hi'},
@@ -26,4 +24,10 @@ export const dialogsReducer = (state = initializeState, action) => {
    }
 }
 
+//Actions Type
+const SEND_MESSAGE = 'DIALOGS/ADD-MESSAGE';
+
+//Actions
 export const sendMessageCreator = (messageText) => ({type: SEND_MESSAGE, messageText});
+
+
