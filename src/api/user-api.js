@@ -1,4 +1,4 @@
-import {instance, profileAPI} from './api';
+import {instance} from './api';
 
 export const usersAPI = {
 
