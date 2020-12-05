@@ -1,19 +1,19 @@
 import React from 'react';
 import './App.css';
-import {Navbar} from './components/Navbar/Navbar';
-import {News} from './components/News/News';
-import {Music} from './components/Music/Music';
-import {Settings} from './components/Settings/Settings';
+import {Navbar} from './u3-features/Navbar/Navbar';
+import {News} from './u3-features/News/News';
+import {Music} from './u3-features/Music/Music';
+import {Settings} from './u3-features/Settings/Settings';
 import {Route, withRouter} from 'react-router-dom';
-import HeaderContainer from './components/Header/HeaderContainer';
-import ProfileContainer from './components/Profile/ProfileContainer';
-import DialogsContainer from './components/Dialogs/DialogsContainer';
-import UsersContainer from './components/Users/UsersContainer';
-import Login from './components/Login/Login';
+import HeaderContainer from './u3-features/Header/HeaderContainer';
+import ProfileContainer from './u3-features/Profile/ProfileContainer';
+import DialogsContainer from './u3-features/Dialogs/DialogsContainer';
+import UsersContainer from './u3-features/Users/UsersContainer';
+import Login from './u3-features/Login/Login';
 import {connect} from 'react-redux';
 import {compose} from 'redux';
-import {initializeApp} from './redux/app-reducer';
-import {Preloader} from './components/common/preloader/Preloader';
+import {initializeApp} from './u4-redux/app-reducer';
+import {Preloader} from './u2-components/common/preloader/Preloader';
 
 class App extends React.Component {
 
