@@ -14,7 +14,12 @@ export const profileReducer = (state = initializeState, action) => {
       case ADD_POST:
          return {
             ...state,
-            posts: [{id: 3, message: action.postMessageText, likesCount: 0}, ...state.posts],
+            posts: [{id: 5, message: action.postMessageText, likesCount: 0}, ...state.posts],
+         };
+      case DELETE_POST:
+         return {
+            ...state,
+            posts: state.posts.filter(p => p.id !== action.postId)
          };
       case SET_USER_PROFILE: {
          return {
@@ -44,14 +49,15 @@ const ADD_POST = 'PROFILE/ADD-POST';
 const SET_USER_PROFILE = 'PROFILE/SET-USER-PROFILE';
 const GET_USER_PROFILE_STATUS = 'PROFILE/SET-USER-PROFILE-STATUS';
 const SET_OWN_PROFILE_STATUS = 'PROFILE/UPDATE-PROFILE-STATUS';
+const DELETE_POST = 'PROFILE/DELETE-POST';
 
 //Actions
 export const addPostActionCreator = (postMessageText) => ({type: ADD_POST, postMessageText});
-export const setUserProfileData = (profile) =>
-   ({type: SET_USER_PROFILE, profile})
+export const setUserProfileData = (profile) => ({type: SET_USER_PROFILE, profile});
+export const deletePostAC = (postId) => ({type: SET_USER_PROFILE, postId});
 //---status
 export const getUserStatus = (userStatus) => ({type: GET_USER_PROFILE_STATUS, userStatus});
-export const setOwnProfileStatus = (status) => ({type: SET_OWN_PROFILE_STATUS, status});
+export const setOwnProfileStatus = (status) => ({type: DELETE_POST, status});
 
 //Thunks
 export const getUserProfileData = (userId) => (dispatch) => {
