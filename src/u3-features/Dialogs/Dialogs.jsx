@@ -6,26 +6,26 @@ import AddMessageForm from './AddMessageForm/AddMessageForm';
 
 export const Dialogs = (props) => {
 
-   let state = props.dialogsPage;
+    let state = props.dialogsPage;
 
-   let dialogsElements = state.dialogs.map(d => <DialogItem name={d.name} key={d.id} id={d.id}/>);
-   let messagesElements = state.messages.map(m => <Message key={m.id} message={m.message}/>);
+    let dialogsElements = state.dialogs.map(d => <DialogItem name={d.name} key={d.id} id={d.id}/>);
+    let messagesElements = state.messages.map(m => <Message key={m.id} message={m.message}/>);
 
-   let addNewMessage = (value) => {
-      props.addMessage(value.newMessageText);
-   }
+    let addNewMessage = (value) => {
+        props.addMessage(value.newMessageText);
+    }
 
-   return (
-      <div className={s.dialogs}>
-         <div className={s.dialogsItems}>
-            {dialogsElements}
-         </div>
-         <div className={s.messages}>
-            <div>{messagesElements}</div>
-            <div className={s.addMessage}>
-               <AddMessageForm onSubmit={addNewMessage}/>
+    return (
+        <div className={s.dialogs}>
+            <div className={s.dialogsItems}>
+                {dialogsElements}
             </div>
-         </div>
-      </div>
-   )
+            <div className={s.messages}>
+                <div>{messagesElements}</div>
+                <div className={s.addMessage}>
+                    <AddMessageForm onSubmit={addNewMessage}/>
+                </div>
+            </div>
+        </div>
+    )
 }
