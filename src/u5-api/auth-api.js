@@ -1,12 +1,12 @@
-import {instance} from './api';
+import {instance} from './api'
 
 export const authAPI = {
    authMe() {
       return instance.get(`auth/me`)
    },
 
-   login(email,password,rememberMe = false) {
-      return instance.post(`auth/login`,{email,password,rememberMe})
+   login(email, password, rememberMe = false) {
+      return instance.post(`auth/login`, {email, password, rememberMe})
    },
 
    logout() {

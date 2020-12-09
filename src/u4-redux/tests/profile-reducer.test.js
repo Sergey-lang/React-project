@@ -1,7 +1,6 @@
 import {addPostActionCreator, deletePostAC, profileReducer} from '../profile-reducer';
 import expect from 'expect';
 
-
 let startState;
 beforeEach(() => {
    startState = {
@@ -36,8 +35,8 @@ test('post should be deleted ', () => {
    const action = deletePostAC(3)
 
    const endState = profileReducer(startState, action)
-   expect(endState.posts.length).toBe(4)
-   expect(endState.posts[2].message).toBe('Hello I am props 4') //check this test
+   expect(endState.posts.length).toBe(3)
+   expect(endState.posts[2].message).toBe('Hello I am props 4')
 });
 
 test(`after deleting post length shouldn't be decrement if id is incorrect`, () => {

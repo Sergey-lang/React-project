@@ -9,25 +9,25 @@ let initializeState = {
       {id: 2, message: 'How are you?'},
       {id: 3, message: 'I can met with you'}
    ],
-};
+}
 
 export const dialogsReducer = (state = initializeState, action) => {
    switch (action.type) {
       case SEND_MESSAGE:
-         let newMessage = action.messageText;
+         let newMessage = action.messageText
          return {
             ...state,
-            messages: [...state.messages, {id: 6, message:newMessage}]
-         };
+            messages: [...state.messages, {id: 6, message: newMessage}]
+         }
       default:
-         return state;
+         return state
    }
 }
 
 //Actions Type
-const SEND_MESSAGE = 'DIALOGS/ADD-MESSAGE';
+const SEND_MESSAGE = 'DIALOGS/ADD-MESSAGE'
 
 //Actions
-export const sendMessageCreator = (messageText) => ({type: SEND_MESSAGE, messageText});
+export const sendMessageCreator = (messageText) => ({type: SEND_MESSAGE, messageText})
 
 
