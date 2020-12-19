@@ -1,4 +1,4 @@
-**Typescript version https://sergey-lang.github.io/Social-TypeScript/**
+**Typescript version https://github.com/Sergey-lang/Social-TypeScript**
 
 ### https://sergey-lang.github.io/Social-JS/
 
