@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c9e0bcacb291f1c231a38e5c8bb6d7b2",
+    "revision": "8e913be4de6f28569b904af6b6f90298",
     "url": "/Social-JS/index.html"
   },
   {
-    "revision": "17467932f31291d85417",
-    "url": "/Social-JS/static/css/main.fe970cdd.chunk.css"
+    "revision": "646e54fd9614c21ce20e",
+    "url": "/Social-JS/static/css/main.225f225b.chunk.css"
   },
   {
-    "revision": "1400434bb6b8439256d5",
-    "url": "/Social-JS/static/js/2.71ec2a30.chunk.js"
+    "revision": "f754be00c7f62532aa85",
+    "url": "/Social-JS/static/js/2.697c0192.chunk.js"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Social-JS/static/js/2.71ec2a30.chunk.js.LICENSE.txt"
+    "revision": "3453b8997016469371284a28c0e873e2",
+    "url": "/Social-JS/static/js/2.697c0192.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "17467932f31291d85417",
-    "url": "/Social-JS/static/js/main.4ec352e1.chunk.js"
+    "revision": "646e54fd9614c21ce20e",
+    "url": "/Social-JS/static/js/main.9d3cec36.chunk.js"
   },
   {
     "revision": "4521d2ef42f3f0395a62",
