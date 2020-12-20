@@ -3,7 +3,7 @@ import {updateObjectInArray} from '../utils/objects-helpers'
 
 let initializeState = {
    users: [],
-   pageSize: 5,
+   pageSize: 10,
    totalUsersCount: 0,
    currentPage: 1,
    isFetching: true,

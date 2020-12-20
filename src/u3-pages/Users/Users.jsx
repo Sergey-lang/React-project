@@ -9,7 +9,7 @@ export const Users = ({currentPage, onPageChanged, totalUsersCount, pageSize, us
        <div className={s.users_wrapper}>
           <Paginator currentPage={currentPage}
                      onPageChanged={onPageChanged}
-                     totalUsersCount={totalUsersCount}
+                     totalItemsCount={totalUsersCount}
                      pageSize={pageSize}
           />
 

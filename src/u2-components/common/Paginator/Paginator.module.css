@@ -1,4 +1,17 @@
 .selectPage {
     font-weight: bold;
-    color: rgb(231, 92, 12);
+    color: black;
+}
+
+.pageNumber {
+    cursor: pointer;
+    margin: 0 2px 0 2px ;
+}
+
+.pageNumber:first-of-type {
+    margin-left: 5px;
+}
+
+.pageNumber:last-of-type {
+    margin-left: 5px;
 }
