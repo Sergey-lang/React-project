@@ -39,6 +39,12 @@ export const profileReducer = (state = initializeState, action) => {
             status: action.status
          }
       }
+      case SAVE_PHOTO_SUCCESS: {
+         return {
+            ...state,
+            profile: {...state.profile, photos: action.photos}
+         }
+      }
       default:
          return state
    }
@@ -50,14 +56,17 @@ const SET_USER_PROFILE = 'PROFILE/SET-USER-PROFILE'
 const GET_USER_PROFILE_STATUS = 'PROFILE/SET-USER-PROFILE-STATUS'
 const SET_OWN_PROFILE_STATUS = 'PROFILE/UPDATE-PROFILE-STATUS'
 const DELETE_POST = 'PROFILE/DELETE-POST'
+const SAVE_PHOTO_SUCCESS = 'SAVE-PHOTO-SUCCESS'
 
 //Actions
 export const addPostActionCreator = (postMessageText) => ({type: ADD_POST, postMessageText})
 export const setUserProfileData = (profile) => ({type: SET_USER_PROFILE, profile})
 export const deletePostAC = (postId) => ({type: DELETE_POST, postId})
-//---status
+//status
 export const getUserStatus = (userStatus) => ({type: GET_USER_PROFILE_STATUS, userStatus})
 export const setOwnProfileStatus = (status) => ({type: SET_OWN_PROFILE_STATUS, status})
+//info
+export const savePhotoSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos})
 
 //Thunks
 export const getUserProfileData = (userId) => async (dispatch) => {
@@ -74,5 +83,12 @@ export const updateOwnProfileStatus = (status) => async (dispatch) => {
    let data = await profileAPI.updateOwnProfileStatus(status)
    if (data.resultCode === 0) {
       dispatch(setOwnProfileStatus(status))
+   }
+}
+
+export const savePhoto = (file) => async (dispatch) => {
+   let data = await profileAPI.savePhoto(file)
+   if (data.resultCode === 0) {
+      dispatch(savePhotoSuccess(data.data.photos))
    }
 }

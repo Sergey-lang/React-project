@@ -19,4 +19,16 @@ export const profileAPI = {
              return res.data
           })
    },
+   savePhoto(photoFile) {
+      const formData = new FormData()
+      formData.append('image', photoFile)
+      return instance.put(`profile/photo/`, formData, {
+         headers: {
+            'Content-Type': 'multipart/form-data'
+         }
+      })
+          .then(res => {
+             return res.data
+          })
+   },
 }
