@@ -1,4 +1,5 @@
 import {profileAPI} from '../u5-api/profile-api'
+import {stopSubmit} from 'redux-form'
 
 let initializeState = {
    posts: [
@@ -67,6 +68,7 @@ export const getUserStatus = (userStatus) => ({type: GET_USER_PROFILE_STATUS, us
 export const setOwnProfileStatus = (status) => ({type: SET_OWN_PROFILE_STATUS, status})
 //info
 export const savePhotoSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos})
+// export const saveProfileSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos})
 
 //Thunks
 export const getUserProfileData = (userId) => async (dispatch) => {
@@ -90,5 +92,19 @@ export const savePhoto = (file) => async (dispatch) => {
    let data = await profileAPI.savePhoto(file)
    if (data.resultCode === 0) {
       dispatch(savePhotoSuccess(data.data.photos))
+   }
+}
+
+export const saveProfile = (profile) => async (dispatch, getState) => {
+   const userId = getState().auth.id
+   let data = await profileAPI.saveProfile(profile)
+   if (data.resultCode === 0) {
+      dispatch(getUserProfileData(userId))
+   } else {
+      let messages = data.messages.length > 0 ? data.messages[0] : 'some error'
+      //need changing error for different fields
+      // dispatch(stopSubmit('edit-profile', {'contacts': {'facebook': messages}}))
+      dispatch(stopSubmit('edit-profile', {_error: messages}))
+      return Promise.reject(messages)
    }
 }
