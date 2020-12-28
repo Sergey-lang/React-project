@@ -1,6 +1,7 @@
 import React from 'react'
 import {CreateField, Input, Textarea} from '../../../../u2-components/common/FormsControls/FormControls'
 import {reduxForm} from 'redux-form'
+
 import s from '../../../Login/Login.module.css'
 
 export const ProfileDataForm = ({handleSubmit, profile,error}) => {

@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css'
 import {Navbar} from './u3-pages/Navbar/Navbar'
 import {News} from './u3-pages/News/News'
 import {Music} from './u3-pages/Music/Music'
@@ -12,6 +11,8 @@ import {initializeApp} from './u4-redux/app-reducer'
 import {Preloader} from './u2-components/common/preloader/Preloader'
 import store from './u4-redux/store'
 import {withSuspense} from './u2-components/hoc/withSuspense'
+
+import './App.css'
 
 const Login = React.lazy(() => import('./u3-pages/Login/Login'))
 const ProfileContainer = React.lazy(() => import('./u3-pages/Profile/ProfileContainer'))
@@ -56,7 +57,6 @@ const mapStateToProps = (state) => ({
 const AppContainer = compose(
     withRouter,
     connect(mapStateToProps, {initializeApp}))(App)
-
 
 export const MainApp = (props) => {
    return (

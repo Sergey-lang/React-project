@@ -1,5 +1,4 @@
 import React from 'react'
-import s from './Login.module.css'
 import {reduxForm} from 'redux-form'
 import {CreateField, Input} from '../../u2-components/common/FormsControls/FormControls'
 import {required} from '../../utils/validators/validators'
@@ -7,15 +6,17 @@ import {connect} from 'react-redux'
 import {login} from '../../u4-redux/auth-reducer'
 import {Redirect} from 'react-router-dom'
 
+import s from './Login.module.css'
+
 export const LoginForm = ({handleSubmit, error}) => {
    return (
        <form onSubmit={handleSubmit}>
           <p>Use test data</p>
           <p>Email: free@samuraijs.com</p>
           <p>Password: free</p>
-          {CreateField('Login', 'login', Input, [required])}
-          {CreateField('Password', 'password', Input, [required], {type: 'password'})}
-          {CreateField(null, 'rememberMe', Input, [], {type: 'checkbox'}, 'remember me')}
+          {CreateField('Login', 'login', [required], Input,)}
+          {CreateField('Password', 'password', [required], Input, {type: 'password'})}
+          {CreateField(null, 'rememberMe', [], Input, {type: 'checkbox'}, 'remember me')}
           <div>
              <button>Login</button>
           </div>
