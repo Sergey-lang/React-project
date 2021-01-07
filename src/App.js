@@ -25,7 +25,7 @@ const UsersContainer = React.lazy(() => import('./u3-pages/Users/UsersContainer'
 
 class App extends React.Component {
 
-   catchAllUnhandledErrors(reason,promise){
+   catchAllUnhandledErrors(reason, promise){
       alert('seme error')
    }
 
