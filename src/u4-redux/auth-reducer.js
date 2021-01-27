@@ -25,7 +25,6 @@ export const authReducer = (state = initializeState, action) => {
 }
 
 //Actions Type
-// const TOGGLE_IS_FETCHING = 'AUTH/IS_FETCHING'
 const SET_USER_DATA = 'AUTH/SET_USER_DATA'
 const GET_CAPTCHA_URL = 'AUTH/GET-CAPTCHA-URL'
 

@@ -2,6 +2,7 @@ import React from 'react'
 import {Field, reduxForm} from 'redux-form'
 import {Textarea} from '../../../u2-components/common/FormsControls/FormControls'
 import {maxLengthCreator, required} from '../../../utils/validators/validators'
+import {Button} from 'antd';
 
 const maxLength50 = maxLengthCreator(100)
 
@@ -16,7 +17,7 @@ const AddMessageForm = (props) => {
              />
           </div>
           <div>
-             <button>Send message</button>
+             <Button>Send message</Button>
           </div>
        </form>
    )

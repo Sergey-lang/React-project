@@ -16,7 +16,7 @@ const FormControl = ({input, meta: {touched, error}, children}) => {
 
 export const Textarea = (props) => {
    const {input, meta, ...restProps} = props
-   return <FormControl {...props}><textarea {...input}{...restProps}/></FormControl>
+   return <FormControl {...props}><textarea rows={4} {...input}{...restProps}/></FormControl>
 }
 
 export const Input = (props) => {
