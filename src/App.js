@@ -12,8 +12,8 @@ import {Preloader} from './u2-components/common/preloader/Preloader'
 
 import {initializeApp} from './u4-redux/app-reducer'
 import {withSuspense} from './u2-components/hoc/withSuspense'
-import {BrowserRouter, Link, Redirect, Route, Switch, withRouter} from 'react-router-dom'
-import {LaptopOutlined, NotificationOutlined, UserOutlined} from '@ant-design/icons';
+import {HashRouter, Link, Redirect, Route, Switch, withRouter} from 'react-router-dom'
+import {LaptopOutlined, UserOutlined} from '@ant-design/icons';
 import {Breadcrumb, Layout, Menu} from 'antd';
 import 'antd/dist/antd.css';
 import {AppHeader} from './u3-pages/Header/Header';
@@ -104,10 +104,10 @@ const AppContainer = compose(
 
 export const MainApp = (props) => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Provider store={store}>
                 <AppContainer/>
             </Provider>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
